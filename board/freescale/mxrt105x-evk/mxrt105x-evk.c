@@ -44,6 +44,9 @@ int board_early_init_f(void)
 	CLOCK_SetMux(kCLOCK_UartMux,1);
 	CLOCK_EnableClock(kCLOCK_Lpuart1);
 
+	CLOCK_SetMux(kCLOCK_UartMux,3);
+	CLOCK_EnableClock(kCLOCK_Lpuart3);
+
 	mxrt105x_evk_usb_init();
 
 	return 0;
